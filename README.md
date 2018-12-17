@@ -99,6 +99,7 @@ save them in /bin, or you can edit existing commands.
     man       = Show all available commands or their documentation
     mkdir     = Create directory
     mv        = Move file or directory
+    nth       = Return Nth item of input array
     parse     = Convert string to structure
     pretty    = Pretty print structure
     pwd       = Return working directory
