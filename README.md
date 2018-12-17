@@ -116,8 +116,9 @@ save them in /bin, or you can edit existing commands.
 
 ## Gotchas and notes ##
 
-- you need to wrap string arguments in quotes, cd .., mkdir foo, editor bar.txt
-will not work, use: cd "..", mkdir "foo", editor "bar.txt"
+- you need to wrap string arguments in quotes. Simple arguments like cd .., 
+mkdir foo, editor bar.txt will work, but for more complex stuff use quotes: 
+cd "..", mkdir "foo", editor "bar.txt"
 
 - You need to use valid structures in arguments, {foo:1+2} is valid JS, but not
 valid structure, use {foo:3}
