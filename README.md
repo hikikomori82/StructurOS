@@ -9,6 +9,8 @@ It's current version is sumulator of a terminal that can run in browser with
 filesystem using localStorage, You can also define your own commands in JS and
 save them in /bin, or you can edit existing commands.
 
+Try the [online demo](http://hikikomori82.github.io/structuros)
+
 ## Examples ##
 
     guest@local:/home$ uname
