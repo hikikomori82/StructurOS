@@ -11,7 +11,7 @@ SOS.bin.fix = function (input, argument) {
         return {
             summary: "Convert input string to string structure",
             synopsis: ["cat [path] | fix"],
-            description: ["Certain commands (join) return string which is not a valid structrue, fix will wrap it in quotes, thus converting it to structure that can be processed in pipe."],
+            description: ["Certain commands (join) return string which is not a valid structure, fix will wrap it in quotes, thus converting it to structure that can be processed in pipe."],
             options: undefined,
             returns: ["String"],
             errors: undefined,

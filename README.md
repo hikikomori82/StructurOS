@@ -11,7 +11,68 @@ save them in /bin, or you can edit existing commands.
 
 ## Examples ##
 
-.. sem dat 3 priklady ktore "predaju" core idea
+    guest@local:/home$ uname
+    {
+        "kernel": "Hammer",
+        "hostname": "local",
+        "version": "v0.1",
+        "build": "2018-12-10T21:38:42.000Z",
+        "arch": "x86_64",
+        "os": "StructurOS"
+    }
+
+    guest@local:/home$ uname | filter {kernel:1, version:1} | values | join " "
+    Hammer v0.1
+
+    guest@local:/home$ uptime | tee "all_data.txt" | filter "seconds" | tee "some_data.txt" | pretty
+    seconds = 141.183
+
+    guest@local:/home$ env {fontSize:"14px", indent:2}
+    {
+      "try": true,
+      "ps1": "guest@local:~$ ",
+      "ps1color": "lime",
+      "inputColor": "yellow",
+      "indent": 2,
+      "color": "white",
+      "backgroundColor": "black",
+      "backgroundImage": "url(image/background.png)",
+      "fontFamily": "WhiteRabbit.ttf",
+      "fontSize": "14px",
+      "errors": {
+        "Warning": "yellow",
+        "Error": "red",
+        "SyntaxError": "orange",
+        "SplitError": "violet",
+        "InputError": "magenta",
+        "TypeError": "fuchsia"
+      }
+    }
+
+    guest@local:/home$ cat /etc/motd | split \n | nth 1 | parse
+    Type "man" to show available commands
+
+    guest@local:/home$ man log | filter examples | values | nth 0 | join \n
+    log {x:1, y: 2}
+    log "hello"
+
+    guest@local:/home$ logcat | tail 2
+    [
+      {
+        "program": "uname",
+        "date": 1545069359559,
+        "argument": {
+          "kernel": "Hammer",
+          "version": "v0.1"
+        }
+      },
+      {
+        "program": "",
+        "date": 1545069372834,
+        "argument": "hello world"
+      }
+    ]
+
 
 ## Commands ##
 
