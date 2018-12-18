@@ -23,6 +23,11 @@ SOS.bin.pretty = function (input, argument) {
         };
     }
 
+    // return input as is
+    if (typeof input === 'string') {
+        return input;
+    }
+
     var s = "                                       ";
     var default_indent = s.substr(0, SOS.env.indent);
 
