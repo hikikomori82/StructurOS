@@ -27,6 +27,10 @@ SOS.bin.uptime = function (input, argument) {
                 "uptime {days:1}",
                 "uptime {seconds:1, human:1}"
             ],
+            format: {
+                now: "ISO 8601",
+                now_ms: "UNIX Epoch time"
+            },
             see_also: ["uname"]
         };
     }
